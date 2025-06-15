@@ -51,13 +51,28 @@ const handleNaviagtion =(path)=>(e) => {
           <div className="nav-item">
             <Link href="/work" onClick={handleNaviagtion("/work")}>work</Link>
           </div>
+           <div className="nav-item" onClick={handleNaviagtion("/studio")}> 
+            <Link href="/studio">about</Link>
+          </div>
           <div className="nav-item">
             <Link href="/contact" onClick={handleNaviagtion("/contact")}>contact</Link>
           </div>
-          <div className="nav-item" onClick={handleNaviagtion("/studio")}> 
-            <Link href="/studio">certication</Link>
-          </div>
         </div>
+         <div className="nav-container">
+  <div className="nav-item">
+    <a
+      href="https://your-resume-link.com/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
+  </div>
+  <div className="nav-item" onClick={handleNaviagtion("/certification")}>
+    <Link href="/certification">
+certification</Link>
+  </div>
+</div>
         <div className="nav-copy">
          <p> Mumbai, India  </p>
         </div>
