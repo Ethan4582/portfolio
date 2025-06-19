@@ -20,6 +20,10 @@ const Contact = () => {
             <h2>Collaboration</h2>
             <h2>https://x.com/SinghAshir65848</h2>
           </div>
+           <div className="contact-copy">
+            <h2>Contact</h2>
+            <h2>8421933430</h2>
+          </div>
         </div>
         <div className="social">
           <a href="https://www.linkedin.com/in/ashirwad08singh/" target="_blank" rel="noopener noreferrer">

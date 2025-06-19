@@ -40,7 +40,7 @@ export default function Certification() {
                 key={index}
               />
             ))
-          }
+          }+
         </div>
         <Modal modal={modal} projects={projects}/>
       </main>

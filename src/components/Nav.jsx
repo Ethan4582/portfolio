@@ -51,9 +51,9 @@ const handleNaviagtion =(path)=>(e) => {
           <div className="nav-item">
             <Link href="/work" onClick={handleNaviagtion("/work")}>work</Link>
           </div>
-           <div className="nav-item" onClick={handleNaviagtion("/studio")}> 
+           {/* <div className="nav-item" onClick={handleNaviagtion("/studio")}> 
             <Link href="/studio">about</Link>
-          </div>
+          </div> */}
           <div className="nav-item">
             <Link href="/contact" onClick={handleNaviagtion("/contact")}>contact</Link>
           </div>
