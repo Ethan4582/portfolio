@@ -1,42 +1,104 @@
-// "use client";
-
-// import {useRevealer} from "@/hooks/useReveal";
-
-// export default function Home() {
-//   useRevealer(); 
-//   // This hook triggers the reveal animation on page load
-//   return (
-//     <>
-//     <div className="revealer"></div>
-//       <div className="home">
-//         <div className="header">
-//           <h1>Hi, I’m Ashirwad Singh — a [your profession, e.g., web developer, designer] based in Mumbai, India. I craft digital experiences with creativity and precision.</h1>
-//         </div>
-
-//         <div className="hero-img">
-//           <img src="/hero.png" alt="" />
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-
-
 "use client";
 
-import {useRevealer} from "@/hooks/useReveal";
+import { useState } from "react";
+import About from "@/components/about/page";
+import ProjectHome from "@/components/project/projectindex";
+import Modal from "@/components/modal";
+import { useRevealer } from "@/hooks/useReveal";
+import { motion } from "framer-motion";
+import Footer from "@/components/footer/page";
+import Copy from "@/components/Copy";
+import { ReactLenis } from "lenis/react";
+
+// Project data
+const projects = [
+  {
+    title: "Dev Finder ",
+    src: "/project_img/img2.png",
+    color: "#000000",
+    url: "https://dev-finder-amber-chi.vercel.app/"
+  },
+  {
+    title: "Chess",
+    src: "/project_img/img9.png",
+    color: "#212121",
+    url: "https://chess-com-v8tt.onrender.com/"
+  },
+  {
+    title: "Streamerzz",
+    src: "/project_img/img16.png",
+    color: "#333333",
+    url: "https://streamerzz-indol.vercel.app/" 
+  },
+  {
+    title: "Nike Page",
+    src: "/project_img/img21.png",
+    color: "#1A1A1A",
+    url: "https://github.com/Ethan4582/Nike_landing-Page"
+  }
+];
 
 export default function Home() {
-  useRevealer(); 
+  const [modal, setModal] = useState({ active: false, index: 0 });
+  useRevealer();
+
   return (
-    <>
+    <ReactLenis root>
       <div className="revealer"></div>
+      
+      {/* Hero Section */}
       <div className="home">
         <div className="header">
-          <h1>Hi, I'm Ashirwad Singh a web developer based in Mumbai, India. I craft digital experiences with creativity and precision.</h1>
+          <Copy delay={0.5}>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+            >
+              <h2>Ashirwad Singh </h2>
+            </motion.h1>
+          </Copy>
         </div>
       </div>
-    </>
+
+      <Copy delay={0.5}>
+        <About />
+      </Copy>
+
+      {/* Projects Section using the ProjectHome component */}
+      <motion.div 
+        className="projects-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="container">
+          <Copy delay={0.5}>
+            <h2>Selected Work</h2>
+          </Copy>
+          <div className="projects-container">
+            {projects.map((project, index) => (
+              <Copy delay={0.5} key={index}>
+                <ProjectHome
+                  index={index}
+                  title={project.title}
+                  setModal={setModal}
+                  url={project.url}
+                  description="Deployed"
+                />
+              </Copy>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+      
+      {/* Modal component for project hover */}
+      <Modal modal={modal} projects={projects} />
+
+      <Copy delay={0.5}>
+        <Footer />
+      </Copy>
+    </ReactLenis>
   );
 }

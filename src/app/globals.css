@@ -158,6 +158,14 @@ p {
   display: flex;
   gap: 1em;
   z-index: 2;
+    z-index: 1000;
+  transition: transform 0.4s ease;
+}
+
+
+
+.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .nav-logo img {
@@ -167,6 +175,8 @@ p {
   object-fit: cover;   /* ensures the image covers the area */
   display: block;      /* removes any extra space below the image */
 }
+
+
 
 
 .nav .col:nth-child(1) {
@@ -467,3 +477,94 @@ body {
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
 }
+
+/* About Section Styles */
+.about-section {
+  padding: 120px 0;
+  background-color: #f9f9f9;
+}
+
+.about-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.about-content {
+  display: flex;
+  gap: 4rem;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.about-skills {
+  flex: 1;
+}
+
+.about-skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-skills li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Projects Section Styles */
+.projects-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.projects-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projects-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-section h2,
+  .projects-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+

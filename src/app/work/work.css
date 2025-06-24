@@ -1,0 +1,197 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.whitespace.w-1 {
+    width: 100vw;
+    height: 50vh;
+}  
+
+.whitespace.w-2 {
+    width: 100vw;
+    height: 45vh;
+}  
+
+.gallery {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20em;
+}
+
+.project {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+}
+
+.index {
+    flex: 1;
+    padding-left: 2em;
+    height: 0;
+}
+
+.images {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100vh;
+}
+
+.img {
+    flex: 1; 
+    width: 200px;
+    background-color: lightgray; 
+    overflow: hidden;  
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.index .mask {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    height: 70px;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.index .mask h1 {
+    font-family: "Circular Std", sans-serif;
+    font-weight: 500;
+    font-size: 58px;
+    position: relative;
+    will-change: transform;
+    margin: 0;
+}
+
+.index .mask h1 span {
+    position: relative;
+    display: inline-block; 
+    will-change: transform; 
+}
+
+.digit-wrapper,
+.digit-wrapper span {
+    display: inline-block;
+    position: relative;
+    will-change: transform; 
+}
+
+.project-names {
+    position: fixed;
+    width: 200px;
+    top: 50vh;
+    left: 40%;
+    transform: translateX(0%);
+}
+
+.indicator {
+    position: absolute;
+    top: 0;
+    right: 68px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+}
+
+.symbol {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+}  
+
+.name {
+    height: 18px;
+}
+
+.name p {
+    color: gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Circular Std", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: 0;
+}
+
+.name.active p {
+    color: #000;
+}
+
+.preview-img {
+    position: fixed;
+    bottom: 6em;         /* Move upward from 2em to 6em */
+    right: 2em;
+    max-width: 45vw;     /* Increase from 40vw to 60vw */
+    height: calc(85vh - 6em); /* Increase height and adjust for new bottom */
+    opacity: 0.9;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.preview-img img {
+
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.progress-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 100vh;
+    background-color: #000;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.footer p {
+    position: fixed;
+    bottom: 2em;
+    left: 40%;
+    text-transform: none;
+    font-family: "Circular Std", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .footer p {
+        left: 60%;
+    }
+    
+    .index {
+        flex: 1.5;
+    }
+    
+    .project-names {
+        left: 60%;
+    }
+    
+    .preview-img {
+        top: 6em;
+        width: calc(45% - 4em);
+        height: calc(50vh - 8em);
+    }
+}

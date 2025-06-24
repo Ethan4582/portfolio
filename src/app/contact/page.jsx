@@ -2,6 +2,7 @@
 
 import {useRevealer} from "@/hooks/useReveal";
 
+
 const Contact = () => {
   useRevealer();
   return (

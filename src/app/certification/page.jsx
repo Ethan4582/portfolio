@@ -8,8 +8,8 @@ import {useRevealer} from "@/hooks/useReveal";
 
 const projects = [
   {
-    title: "MongoDB Associate Database Administrator (Atlas)",
-    src: "/altas.png",
+    title: "MongoDB Certified Associate Atlas Administrator",
+  src: "/atlas.png", 
     color: "#000000",
     url: "https://www.credly.com/badges/b89022c7-f87c-4c40-8ee3-0b50e69ab80f"
   },
@@ -18,6 +18,12 @@ const projects = [
     src: "/DBA.png",
     color: "#8C8C8C",
     url: "https://www.credly.com/badges/da73279c-138f-4954-bf2f-5aeba4dd5875"
+  },
+   {
+    title: "Foundations of Cyber Physical Systems",
+    src: "/nptel.png",
+    color: "#8C8C8C",
+    url: "https://nptel.ac.in/noc/E_Certificate/NPTEL24CS27S65290073830417287"
   }
 ]
 
@@ -40,7 +46,7 @@ export default function Certification() {
                 key={index}
               />
             ))
-          }+
+          }
         </div>
         <Modal modal={modal} projects={projects}/>
       </main>

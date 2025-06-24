@@ -1,9 +1,10 @@
+
 .project{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 50px 100px;
+      padding: 10px 10px 50px 50px;
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
@@ -11,6 +12,7 @@
 .project:last-of-type{
     border-bottom: 1px solid rgb(201, 201, 201);
 }
+
 
 .project:hover{
     opacity: 0.5;

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Studio',
+  title: 'My Certification',
   icons: {
     icon: '/logo2.png', // This sets the favicon for this route
   },
