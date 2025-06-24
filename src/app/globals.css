@@ -196,6 +196,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* or center */
+   margin-left: 62px;
 }
 
 /* .home {
@@ -567,4 +568,46 @@ body {
   }
 }
 
+/* Fix the hero section CSS */
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0; /* Remove top margin to fill screen */
+}
 
+.hero-image {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important; /* Full width, not 50% */
+  height: 100% !important;
+  z-index: 1;
+  object-fit: cover;
+  filter: brightness(0.7); /* Slightly darkened for better text visibility */
+}
+
+
+.hero-text {
+  position: absolute;
+  top: 60%; /* Shift text further down (default is 50%) */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+.hero-text h1 {
+  font-size: 6vw; /* Larger text */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}

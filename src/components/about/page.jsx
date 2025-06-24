@@ -1,46 +1,44 @@
-
-
-
-
-import { motion } from "framer-motion";
+import Copy from "@/components/Copy";
+import { ReactLenis } from "lenis/react";
 
 const About = () => {
   return (
-  <>
-       {/* About Section with scroll animation */}
-      <motion.div 
-        className="about-section"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="container">
-          <h2>About Me</h2>
-          <div className="about-content">
-            <div className="about-text">
-              <p>I'm a passionate web developer specializing in creating immersive and functional digital experiences. With expertise in modern frontend frameworks and backend technologies, I build solutions that are not only visually appealing but also performant and accessible.</p>
-              <p>My approach combines technical precision with creative problem-solving, allowing me to deliver projects that exceed expectations and provide genuine value.</p>
-            </div>
-            <div className="about-skills">
-              <h3>Skills</h3>
-              <ul>
-                <li>React & Next.js</li>
-                <li>GSAP & Framer Motion</li>
-                <li>MongoDB</li>
-                <li>Node.js</li>
-                <li>Responsive Design</li>
-                <li>API Development</li>
-              </ul>
+    <>
+      <ReactLenis root>
+        <div
+          className="about-section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="container">
+            <Copy delay={0.5}>
+              <h1>About Me</h1>
+            </Copy>
+
+            <div className="about-content">
+              <div className="about-text">
+                <Copy delay={0.5}>
+                  <p>
+                    I’m Ashirwad Singh, an India-based developer passionate about creating immersive and functional digital experiences. I build solutions that are not only visually appealing but also performant and accessible.
+                  </p>
+                </Copy>
+                <Copy delay={0.5}>
+                  <p>
+                    My approach combines technical precision with creative problem-solving, allowing me to deliver projects that exceed expectations and provide genuine value.
+                  </p>
+                </Copy>
+              </div>
+              <div className="about-skills">
+                {/* Add skills here if needed, wrapped in <Copy> as well */}
+              </div>
             </div>
           </div>
         </div>
-      </motion.div>
-  
-  </>
-  )
-}
+      </ReactLenis>
+    </>
+  );
+};
 
-export default About
-
-
+export default About;
