@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Add useEffect
 import About from "@/components/about/page";
 import ProjectHome from "@/components/project/projectindex";
 import Modal from "@/components/modal";
@@ -11,6 +11,7 @@ import Copy from "@/components/Copy";
 import { ReactLenis } from "lenis/react";
 import Image from "next/image";
 
+import { TextAnimate } from "@/components/header-text";
 // Project data
 const projects = [
 	{
@@ -41,25 +42,54 @@ const projects = [
 
 export default function Home() {
 	const [modal, setModal] = useState({ active: false, index: 0 });
+	const [animationReady, setAnimationReady] = useState(false); // Add this state
 	useRevealer();
+
+	// Add this effect to delay the animation until after revealer effect
+	useEffect(() => {
+		// Adjust this timing to match your revealer transition duration
+		const timer = setTimeout(() => {
+			setAnimationReady(true);
+		}, 1000); // Adjust timing based on your revealer animation duration
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
 		<ReactLenis root>
 			<div className="revealer"></div>
 
-			{/* Hero Section with image and overlapping text */}
-			<div className="home-hero">
-				<Image
-					src="/p3.png" // Place your image in /public/profile.jpg or change the path
-					alt="Ashirwad Singh"
-					fill
-					style={{ objectFit: "cover", zIndex: 1 }}
-					className="hero-image"
-					priority
-				/>
-				<div className="hero-text">
-				</div>
-			</div>
+			 <div className="home-about">
+   <div className="home-about-container">
+      <div className="home-about-image">
+         <Image 
+            src="/p1.png" // Replace with your image path
+            alt="Ashirwad Singh"
+            width={500}
+            height={500}
+            className="profile-image"
+            priority
+         />
+      </div>
+      <div className="home-about-text">
+         <TextAnimate
+            as="h1"
+            by="word"
+            animation="blurInUp"
+            delay={0.4}
+            duration={0.6}
+            startOnView={animationReady}
+            once={true}
+         >
+            Hi, I'm Ashirwad 
+			   
+				I build fast, functional, and user-focused web
+            experiences.
+				
+         </TextAnimate>
+      </div>
+   </div>
+</div>
 
 			<Copy delay={0.5}>
 				<About />
