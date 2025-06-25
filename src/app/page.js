@@ -72,21 +72,18 @@ export default function Home() {
          />
       </div>
       <div className="home-about-text">
-         <TextAnimate
-            as="h1"
-            by="word"
-            animation="blurInUp"
-            delay={0.4}
-            duration={0.6}
-            startOnView={animationReady}
-            once={true}
-         >
-            Hi, I'm Ashirwad 
-			   
-				I build fast, functional, and user-focused web
-            experiences.
-				
-         </TextAnimate>
+        <TextAnimate
+   as="h1"
+   by="word"
+   animation="blurInUp"
+   delay={0.4}
+   duration={0.6}
+   startOnView={animationReady}
+   once={true}
+>
+   Hi, I&apos;m Ashirwad — I build fast, functional, and user-focused web
+   experiences.
+</TextAnimate>
       </div>
    </div>
 </div>
