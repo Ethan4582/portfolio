@@ -76,8 +76,8 @@ export default function Home() {
    as="h1"
    by="word"
    animation="blurInUp"
-   delay={0.4}
-   duration={0.6}
+   delay={0.6}
+   duration={0.9}
    startOnView={animationReady}
    once={true}
 >
