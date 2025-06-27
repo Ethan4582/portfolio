@@ -299,7 +299,7 @@ const Work = () => {
 
   // Project data
   const projects = [
-    { id: "01", name: "Dev Rooms", images: [1, 2, 3, 4, 5], link: "https://dev-finder-amber-chi.vercel.app/" },
+    { id: "01", name: "Dev Rooms", images: [1, 2, 3, 4, 5], link: "https://dev-finder-amber-chi.vercel.app" },
     { id: "02", name: "Chess", images: [ 9, 10, 11, 12, 13], link: "https://chess-com-v8tt.onrender.com/" },
     { id: "03", name: "Streamerzz", images: [ 14, 16, 17, 18 , 19, 20], link: "https://streamerzz-indol.vercel.app/" },
     { id: "04", name: "Nike  Page ", images: [ 21, 22, 23, 24, 25], link: "https://github.com/Ethan4582/Nike_landing-Page" }
