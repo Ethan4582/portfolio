@@ -83,7 +83,7 @@ const Nav = () => {
         <div className="nav-container">
           <div className="nav-item">
             <a
-              href="https://drive.google.com/file/d/1xkRPp8xSIsHevoWjj-RbgQtQQ0qgLfAe/view"
+              href="https://drive.google.com/file/d/1zBjZHEEnCsc_FOAgTyma9k1ptTdaq9SX/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
