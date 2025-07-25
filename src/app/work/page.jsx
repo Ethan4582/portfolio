@@ -300,12 +300,13 @@ const Work = () => {
   // Project data
   const projects = [
     { id: "01", name: "Dev Rooms", images: [1, 2, 3, 4, 5], link: "https://dev-finder-amber-chi.vercel.app" },
-    { id: "02", name: "Chess", images: [ 9, 10, 11, 12, 13], link: "https://chess-com-v8tt.onrender.com/" },
-    { id: "03", name: "Streamerzz", images: [ 14, 16, 17, 18 , 19, 20], link: "https://streamerzz-indol.vercel.app/" },
-    { id: "04", name: "Nike  Page ", images: [ 21, 22, 23, 24, 25], link: "https://github.com/Ethan4582/Nike_landing-Page" }
-    // { id: "05", name: "Echo Labs", images: [25, 26, 27, 28, 29, 30], link: "https://example.com/echolabs" },
-    // { id: "06", name: "Vesper", images: [31, 32, 33, 34, 35, 36], link: "https://example.com/vesper" },
-    // { id: "07", name: "Axon", images: [37, 38, 39, 40, 41, 42], link: "https://example.com/axon" },
+     { id: "02", name: "Chatbot", images: [28, 29, 31, 32, 33], link: "https://gemini-ai-chatbot-zeta-sepia.vercel.app/" },
+    { id: "03", name: "Chess", images: [ 9, 10, 11, 12, 13], link: "https://chess-com-v8tt.onrender.com/" },
+    { id: "04", name: "Streamerzz", images: [ 14, 16, 17, 18 , 19, 20], link: "https://streamerzz-indol.vercel.app/" },
+    { id: "05", name: "Nike  Page ", images: [ 21, 22, 23, 24, 25], link: "https://github.com/Ethan4582/Nike_landing-Page" }
+    // { id: "06", name: "Echo Labs", images: [25, 26, 27, 28, 29, 30], link: "https://example.com/echolabs" },
+    // { id: "07", name: "Vesper", images: [31, 32, 33, 34, 35, 36], link: "https://example.com/vesper" },
+    // { id: "08", name: "Axon", images: [37, 38, 39, 40, 41, 42], link: "https://example.com/axon" },
   ];
 
   return (

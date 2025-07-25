@@ -21,6 +21,12 @@ const projects = [
 		url: "https://dev-finder-amber-chi.vercel.app/",
 	},
 	{
+		title: "Chatbot",
+		src: "/project_img/img28.png",
+		color: "#1A1A1A",
+		url: "https://dev-finder-amber-chi.vercel.app/",
+	},
+	{
 		title: "Chess",
 		src: "/project_img/img9.png",
 		color: "#1A1A1A",
@@ -32,12 +38,12 @@ const projects = [
 		color: "#1A1A1A",
 		url: "https://streamerzz-indol.vercel.app/",
 	},
-	{
-		title: "Nike Page",
-		src: "/project_img/img21.png",
-		color: "#1A1A1A",
-		url: "https://github.com/Ethan4582/Nike_landing-Page",
-	},
+	// {
+	// 	title: "Nike Page",
+	// 	src: "/project_img/img21.png",
+	// 	color: "#1A1A1A",
+	// 	url: "https://github.com/Ethan4582/Nike_landing-Page",
+	// },
 ];
 
 export default function Home() {
