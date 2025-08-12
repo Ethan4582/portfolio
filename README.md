@@ -1,8 +1,7 @@
 # Minimal Portfolio Template
 
 
-![Portfolio Screenshot](./img1.png)
-
+![alt text](public/1.png)
 
 ## Tech Stack
 
