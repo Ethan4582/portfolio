@@ -2,9 +2,8 @@
 
 Minimal Portfolio template with GSAP Framer Motion, featuring text reveal animations
 
-![Portfolio Screenshot](./public/img1.png)
+![Portfolio Screenshot](./img1.png)
 
-![Portfolio Demo](./public/img2.png) 
 
 ## Tech Stack
 
