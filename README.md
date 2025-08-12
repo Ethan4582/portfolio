@@ -1,6 +1,5 @@
 # Minimal Portfolio Template
 
-Minimal Portfolio template with GSAP Framer Motion, featuring text reveal animations
 
 ![Portfolio Screenshot](./img1.png)
 
